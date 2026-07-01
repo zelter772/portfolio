@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adeboyejo Ademide — Full-Stack Web Developer</title>
+    <meta
+      name="description"
+      content="Full-stack web developer based in Lagos. Building fast, clean, scalable web apps — from real-time multiplayer games to e-commerce platforms to production-grade business applications."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Background canvas: faint code-rain effect -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom cursor -->
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="page">
+      <!-- ===== NAV ===== -->
+      <header class="nav">
+        <a href="#top" class="logo">AD_</a>
+        <nav class="nav-links">
+          <a href="#about" class="hoverable">About</a>
+          <a href="#projects" class="hoverable">Projects</a>
+          <a href="#contact" class="hoverable">Contact</a>
+        </nav>
+      </header>
+
+      <!-- ===== HERO ===== -->
+      <section class="hero reveal" id="top">
+        <div class="eyebrow">Full-stack web developer</div>
+        <h1 class="hero-name">Adeboyejo<br /><span>Ademide.</span></h1>
+        <p class="hero-tagline">
+          <span id="type-text"></span><span class="type-cursor"></span>
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary hoverable">See my work</a>
+          <a href="#contact" class="btn btn-ghost hoverable">Get in touch</a>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="section reveal" id="about">
+        <div class="section-label">About</div>
+        <p class="about-text">
+          I'm a full-stack developer based in Lagos, building web products that
+          are fast, clean, and built to scale. i specialize in building modern
+          interfaces with React and crafting reliable backend solutions that
+          deliver seamless user experiences.
+        </p>
+        <!-- From real-time multiplayer games
+          to e-commerce platforms with integrated payments to a full real estate
+          platform built from product strategy through to production, I bring
+          precision to every layer of the stack -->
+        <p class="about-text">
+          I care deeply about both the code that powers things and the
+          experience people have using them. Whether it's a sleek frontend, a
+          reliable API, or a full product, I build for real users and real
+          businesses, not just demos.
+        </p>
+        <div class="stack-tags">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Next.js</span>
+          <span class="stack-tag">Vite</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">Tailwind CSS</span>
+          <span class="stack-tag">Zustand</span>
+          <span class="stack-tag">Supabase</span>
+          <span class="stack-tag">Paystack</span>
+          <span class="stack-tag">SEO</span>
+          <span class="stack-tag">Vercel</span>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="section reveal" id="projects">
+        <div class="section-label">Projects</div>
+        <div class="projects-stack">
+          <!-- Project 01 — Olu & Mide (Featured) -->
+          <article class="project-card featured">
+            <div class="preview-window">
+              <div class="browser-bar">
+                <span class="browser-dot"></span
+                ><span class="browser-dot"></span
+                ><span class="browser-dot"></span>
+                <span class="browser-url">oluandmide.com</span>
+                <span class="live-badge building"
+                  ><span class="pulse-dot"></span>building</span
+                >
+              </div>
+              <div class="preview-frame-wrap" data-src="">
+                <div class="preview-placeholder">
+                  <span class="placeholder-text"
+                    >preview pending deployment</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="featured-badge">Featured case study</div>
+              <div class="project-num">01</div>
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title">Olu & Mide Ltd</h3>
+                  <p class="project-tagline">Verified land sales platform</p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <span class="project-link disabled">In progress</span>
+                  <a
+                    href="projects/olu-mide.html"
+                    class="project-link hoverable"
+                    >Case study →</a
+                  >
+                </div>
+              </div>
+              <p class="project-desc">
+                A full-stack real estate platform solving land fraud in the
+                Nigerian property market. Built from product strategy and buyer
+                persona research through to a secure, production-grade
+                application with a public listings site and a separate
+                authenticated admin dashboard.
+              </p>
+              <ul class="project-features">
+                <li>Title verification system with legal status badges</li>
+                <li>Live filtering, lightbox galleries, and GPS maps</li>
+                <li>WhatsApp-first, context-aware contact flows</li>
+                <li>Server-side auth with database-level row security</li>
+                <li>Custom admin dashboard for listings and leads</li>
+                <li>Full SEO: sitemaps, JSON-LD, Open Graph</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 — Broken Keys -->
+          <article class="project-card reveal">
+            <div class="preview-window">
+              <div class="browser-bar">
+                <span class="browser-dot"></span
+                ><span class="browser-dot"></span
+                ><span class="browser-dot"></span>
+                <span class="browser-url">broken-keys.vercel.app</span>
+                <span class="live-badge live"
+                  ><span class="pulse-dot"></span>live</span
+                >
+              </div>
+              <div
+                class="preview-frame-wrap"
+                data-src="https://broken-keys.vercel.app"
+              >
+                <div class="preview-placeholder">
+                  <span class="placeholder-text">loading preview…</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">02</div>
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title">Broken Keys</h3>
+                  <p class="project-tagline">Real-time competitive word game</p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a
+                    href="https://broken-keys.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link hoverable mobile-only-link"
+                    >Live site ↗</a
+                  >
+                  <a
+                    href="projects/broken-keys.html"
+                    class="project-link hoverable"
+                    >Case study →</a
+                  >
+                </div>
+              </div>
+              <p class="project-desc">
+                A real-time 1v1 multiplayer word game built to feel responsive
+                and game-like. Full auth system, live state sync, and a
+                267,000-word dictionary engine validating moves instantly.
+              </p>
+              <ul class="project-features">
+                <li>Real-time 1v1 multiplayer with live sync</li>
+                <li>267k-word dictionary validation engine</li>
+                <li>Daily challenge mode and global leaderboard</li>
+                <li>Installable PWA, offline-capable</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">Zustand</span>
+                <span class="tech-tag">Supabase</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 — Zyn Beats -->
+          <article class="project-card reveal">
+            <div class="preview-window">
+              <div class="browser-bar">
+                <span class="browser-dot"></span
+                ><span class="browser-dot"></span
+                ><span class="browser-dot"></span>
+                <span class="browser-url">zynbeats.vercel.app</span>
+                <span class="live-badge live"
+                  ><span class="pulse-dot"></span>live</span
+                >
+              </div>
+              <div
+                class="preview-frame-wrap"
+                data-src="https://zynbeats.vercel.app"
+              >
+                <div class="preview-placeholder">
+                  <span class="placeholder-text">loading preview…</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">03</div>
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title">Zyn Beats</h3>
+                  <p class="project-tagline">
+                    Beat store and e-commerce platform
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a
+                    href="https://zynbeats.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link hoverable"
+                    >Live site ↗</a
+                  >
+                  <a
+                    href="projects/zyn-beats.html"
+                    class="project-link hoverable"
+                    >Case study →</a
+                  >
+                </div>
+              </div>
+              <p class="project-desc">
+                A full e-commerce storefront for selling beats and licenses,
+                built for an actual production business. Tiered licensing,
+                secure checkout, and automated order emails.
+              </p>
+              <ul class="project-features">
+                <li>Tiered licensing: basic, streaming, exclusive</li>
+                <li>Secure checkout via Paystack</li>
+                <li>Admin dashboard for catalog and orders</li>
+                <li>Automated email notifications via Resend</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Paystack</span>
+                <span class="tech-tag">Resend</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04 — Cerebra -->
+          <article class="project-card reveal">
+            <div class="preview-window">
+              <div class="browser-bar">
+                <span class="browser-dot"></span
+                ><span class="browser-dot"></span
+                ><span class="browser-dot"></span>
+                <span class="browser-url">mycerebra.vercel.app</span>
+                <span class="live-badge live"
+                  ><span class="pulse-dot"></span>live</span
+                >
+              </div>
+              <div
+                class="preview-frame-wrap"
+                data-src="https://mycerebra.vercel.app"
+              >
+                <div class="preview-placeholder">
+                  <span class="placeholder-text">loading preview…</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">04</div>
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title">Cerebra</h3>
+                  <p class="project-tagline">
+                    Student wellness and productivity app
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a
+                    href="https://mycerebra.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link hoverable mobile-only-link"
+                    >Live site ↗</a
+                  >
+                  <a href="projects/cerebra.html" class="project-link hoverable"
+                    >Case study →</a
+                  >
+                </div>
+              </div>
+              <p class="project-desc">
+                A wellness platform helping students manage mental load
+                alongside academics.
+              </p>
+              <ul class="project-features">
+                <li>Serverless backend via Supabase Edge Functions</li>
+                <li>Push notification scheduling system</li>
+                <li>Diagnosed and fixed live production bug</li>
+                <li>Systematic troubleshooting under deployment</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Edge Functions</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section reveal" id="contact">
+        <div class="section-label">Contact</div>
+        <div class="contact-grid">
+          <div class="contact-left">
+            <p class="contact-text">
+              Have a project in mind or want to work together? Fill the form or
+              reach out directly — I respond fast.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://wa.me/2349064736437"
+                target="_blank"
+                rel="noopener"
+                class="social-link hoverable"
+              >
+                <span class="social-icon">WA</span>WhatsApp
+              </a>
+              <a
+                href="https://twitter.com/zynbts772"
+                target="_blank"
+                rel="noopener"
+                class="social-link hoverable"
+              >
+                <span class="social-icon">X</span>Twitter / X
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <input
+              class="input hoverable"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+            <input
+              class="input hoverable"
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+            <textarea
+              class="textarea hoverable"
+              name="message"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="btn btn-primary hoverable hover-btns"
+              style="align-self: flex-start"
+            >
+              Send message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span class="footer-text">© 2026 — Adeboyejo Ademide</span>
+        <span class="footer-text">Built personally with precision.</span>
+      </footer>
+    </div>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/tilt.js"></script>
+    <script src="js/scroll-progress.js"></script>
+    <script src="js/idle.js"></script>
+    <script src="js/easter-egg.js"></script>
+  </body>
+</html>

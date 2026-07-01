@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cerebra — Adeboyejo Ademide</title>
+    <meta
+      name="description"
+      content="Case study: Cerebra, a student wellness and productivity app with a serverless backend and push notification system."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/case-study.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="page">
+      <header class="nav">
+        <a href="../index.html" class="logo">AD_</a>
+        <nav class="nav-links">
+          <a href="../index.html#about" class="hoverable">About</a>
+          <a href="../index.html#projects" class="hoverable">Projects</a>
+          <a href="../index.html#contact" class="hoverable">Contact</a>
+        </nav>
+      </header>
+
+      <a href="../index.html#projects" class="back-link hoverable"
+        >← Back to projects</a
+      >
+
+      <div class="cs-hero reveal">
+        <div class="cs-eyebrow">Live project</div>
+        <h1 class="cs-title">Cerebra</h1>
+        <p class="cs-tagline">Student wellness and productivity app</p>
+        <p class="cs-summary">
+          A wellness platform built to help students manage their mental load
+          alongside academic responsibilities. Cerebra combines productivity
+          tools with wellness features and a push notification system that
+          required deep backend debugging to get production-ready.
+        </p>
+      </div>
+
+      <div class="cs-meta-row reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Full-stack developer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Stack</span>
+          <span class="cs-meta-value">Supabase, Edge Functions</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Type</span>
+          <span class="cs-meta-value">Client project</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Status</span>
+          <span class="cs-meta-value">Live</span>
+        </div>
+      </div>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">The build</div>
+        <p class="cs-body-text">
+          Cerebra is designed around a simple but important idea: students carry
+          two parallel loads: academic pressure and mental load. And most tools
+          only address one. The platform brings both into one place: study
+          streak tracking, journaling, quick access to wellness resources, and
+          timely push notifications to keep users engaged without overwhelming
+          them.
+        </p>
+        <p class="cs-body-text">
+          The backend runs entirely on Supabase Edge Functions — serverless,
+          deployed at the edge, with no traditional server to maintain.
+        </p>
+
+        <div class="cs-phone-row">
+          <div class="cs-phone-col">
+            <div class="cs-phone">
+              <div class="cs-phone-screen">
+                <img
+                  class="cs-phone-img"
+                  src="../assets/screenshots/cerebra-home.png"
+                  alt="Cerebra home dashboard showing study streak calendar and quick access tools"
+                />
+              </div>
+            </div>
+            <p class="cs-phone-caption">Home dashboard</p>
+          </div>
+          <div class="cs-phone-col">
+            <div class="cs-phone">
+              <div class="cs-phone-screen">
+                <img
+                  class="cs-phone-img"
+                  src="../assets/screenshots/cerebra-more.png"
+                  alt="Cerebra more screen showing resources, tools, and upcoming features"
+                />
+              </div>
+            </div>
+            <p class="cs-phone-caption">Resources and tools</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <!-- <div class="cs-section-label">The production story</div> -->
+        <!-- <p class="cs-body-text">
+          The push notification system was live but not firing correctly in
+          production. The issue turned out to be a misconfigured trigger — the
+          wrong Edge Function was being invoked in the notification pipeline,
+          meaning scheduled notifications were either misfiring or not sending
+          at all.
+        </p>
+        <p class="cs-body-text">
+          Diagnosing this required reading Supabase Edge Function logs in a live
+          environment, tracing the exact invocation path, and isolating which
+          function in the chain was receiving the trigger instead of the correct
+          one. Once identified, the fix was surgical — correcting the function
+          reference in the trigger configuration, redeploying, and verifying in
+          production that notifications were firing on schedule.
+        </p>
+        <p class="cs-body-text">
+          It's the kind of problem that doesn't exist in local development —
+          only in production, only under real conditions. Solving it cleanly
+          without breaking other parts of the system is the kind of work that
+          separates a developer who can ship from one who can also maintain and
+          recover.
+        </p> -->
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">Key features</div>
+        <div class="cs-features-grid">
+          <div class="cs-feature">
+            <p class="cs-feature-title">Study streak tracking</p>
+            <p class="cs-feature-desc">
+              Daily check-in calendar with streak visualization to keep students
+              engaged and accountable over time.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Push notification system</p>
+            <p class="cs-feature-desc">
+              Scheduled, serverless push notifications via Supabase Edge
+              Functions — keeping users engaged without requiring them to be
+              active in the app.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Wellness and productivity tools</p>
+            <p class="cs-feature-desc">
+              Tasks, journaling, free e-resources, and document upload — all
+              accessible from a single clean dashboard.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Serverless backend</p>
+            <p class="cs-feature-desc">
+              Entire backend runs on Supabase Edge Functions — no server to
+              provision, maintain, or scale manually.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tech-row">
+          <span class="cs-tech-tag">Supabase</span>
+          <span class="cs-tech-tag">Edge Functions</span>
+          <span class="cs-tech-tag">Push Notifications</span>
+          <span class="cs-tech-tag">Vercel</span>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">What the client says</div>
+        <div class="cs-testimonial-pending">
+          This works just as the team wanted it to, exactly as we envisioned it.
+        </div>
+
+        <!-- UNCOMMENT WHEN YOU HAVE THE QUOTE:-->
+        <div class="cs-testimonial">
+          <span class="cs-quote-mark">"</span>
+          <p class="cs-quote-text">
+            This app has been helping me keep my mental wellness in check. i
+            love it.
+          </p>
+          <p class="cs-quote-author">— Pharm. otokiti, Cerebra</p>
+        </div>
+      </section>
+
+      <div class="cs-cta-row reveal">
+        <a
+          href="https://mycerebra.vercel.app"
+          target="_blank"
+          rel="noopener"
+          class="cs-btn cs-btn-primary hoverable mobile-only-link"
+        >
+          Visit Cerebra ↗
+        </a>
+        <span class="cs-btn cs-btn-disabled desktop-only-message"
+          >Best experienced on mobile</span
+        >
+        <a href="olu-mide.html" class="cs-next-link hoverable">
+          Back to start: Olu & Mide <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <span class="footer-text">© 2026 — Adeboyejo Ademide</span>
+        <span class="footer-text">Built personally with precision.</span>
+      </footer>
+    </div>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/scroll-progress.js"></script>
+  </body>
+</html>

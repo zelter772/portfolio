@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olu & Mide Ltd — Adeboyejo Ademide</title>
+    <meta
+      name="description"
+      content="Case study: Olu & Mide Ltd, a verified land sales platform built to solve land fraud in the Nigerian property market."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/case-study.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="page">
+      <header class="nav">
+        <a href="../index.html" class="logo">AD_</a>
+        <nav class="nav-links">
+          <a href="../index.html#about" class="hoverable">About</a>
+          <a href="../index.html#projects" class="hoverable">Projects</a>
+          <a href="../index.html#contact" class="hoverable">Contact</a>
+        </nav>
+      </header>
+
+      <a href="../index.html#projects" class="back-link hoverable"
+        >← Back to projects</a
+      >
+
+      <div class="cs-hero reveal">
+        <div class="cs-eyebrow">Featured case study</div>
+        <h1 class="cs-title">Olu & Mide Ltd</h1>
+        <p class="cs-tagline">Verified land sales platform</p>
+        <p class="cs-summary">
+          A full-stack real estate platform solving land fraud in the Nigerian
+          property market — built from product strategy and buyer persona
+          research through to a secure, production-grade application with a
+          public listings site and a fully separate authenticated admin
+          dashboard.
+        </p>
+      </div>
+
+      <div class="cs-meta-row reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Full-stack developer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Stack</span>
+          <span class="cs-meta-value">Next.js, Supabase, PostgreSQL</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Type</span>
+          <span class="cs-meta-value">Client project</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Status</span>
+          <span class="cs-meta-value">In progress</span>
+        </div>
+      </div>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">The problem</div>
+        <p class="cs-body-text">
+          Land fraud is one of the most common and costly risks in the Nigerian
+          property market. Buyers regularly lose significant sums to disputed
+          titles, multiple sales of the same plot, forged documents, and
+          informal Omo-onile land claims. Most existing platforms treat land the
+          same way they treat houses and apartments — with no specific attention
+          to the legal and trust verification process that land transactions
+          uniquely require.
+        </p>
+        <p class="cs-body-text">
+          Olu & Mide was built around a single core idea: make every piece of
+          trust-relevant information about a plot visible to the buyer before
+          they ever speak to an agent, and make the verification process itself
+          a visible, branded feature of the platform.
+        </p>
+
+        <div class="cs-image-grid">
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">oluandmide.com</span>
+            </div>
+            <img
+              class="cs-shot-img"
+              src="../assets/screenshots/olumide-homepage.png"
+              alt="Olu and Mide homepage showing the hero with trust messaging and search bar"
+            />
+          </div>
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">oluandmide.com/contact</span>
+            </div>
+            <img
+              class="cs-shot-img"
+              src="../assets/screenshots/olumide-contact.png"
+              alt="Olu and Mide contact page with WhatsApp-first contact options and embedded map"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">Key features</div>
+        <div class="cs-features-grid">
+          <div class="cs-feature">
+            <p class="cs-feature-title">Title verification system</p>
+            <p class="cs-feature-desc">
+              Every listing carries a visible badge reflecting its actual legal
+              status — C of O, Gazette, Excision, Governor's Consent, or Pending
+              — backed by a documented internal verification process.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Live filtering and search</p>
+            <p class="cs-feature-desc">
+              Buyers filter by state, price, plot size, and title status with
+              instant client-side updates and no page reloads. Verified-only
+              toggle included.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">WhatsApp-first contact design</p>
+            <p class="cs-feature-desc">
+              Every contact point deep-links into WhatsApp with a pre-filled,
+              context-aware message — built for how this market actually
+              communicates.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Secure admin dashboard</p>
+            <p class="cs-feature-desc">
+              A fully separate authenticated back office with server-side
+              session validation. Protected content is never sent to an
+              unauthenticated browser, even momentarily.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Multi-channel lead capture</p>
+            <p class="cs-feature-desc">
+              Every page that can generate a lead feeds into a single unified
+              leads system — removing the risk of enquiries getting lost across
+              disconnected channels.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Full SEO infrastructure</p>
+            <p class="cs-feature-desc">
+              Dynamically generated sitemaps, JSON-LD structured data on every
+              listing for rich search results, and full Open Graph configuration
+              for clean social sharing.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tech-row">
+          <span class="cs-tech-tag">Next.js 14</span>
+          <span class="cs-tech-tag">React</span>
+          <span class="cs-tech-tag">Tailwind CSS</span>
+          <span class="cs-tech-tag">Supabase</span>
+          <span class="cs-tech-tag">PostgreSQL</span>
+          <span class="cs-tech-tag">Row Level Security</span>
+          <span class="cs-tech-tag">Supabase SSR</span>
+          <span class="cs-tech-tag">Vercel</span>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">What the client says</div>
+        <!-- Replace this block with the real testimonial once collected. Delete the
+        cs-testimonial-pending div and uncomment the cs-testimonial block below
+        it. -->
+        <div class="cs-testimonial-pending">
+          The ideas for the site were exceptional from the beginning, and every
+          progress reported has been very good. looking forward to the
+          completion of the project.
+        </div>
+
+        <!-- UNCOMMENT WHEN YOU HAVE THE QUOTE: -->
+        <div class="cs-testimonial">
+          <span class="cs-quote-mark">"</span>
+          <p class="cs-quote-text">
+            the interface is impressive and the user flow is top-notch.
+          </p>
+          <p class="cs-quote-author">— Adeboyejo Olamide, Olu & Mide Ltd</p>
+        </div>
+      </section>
+
+      <div class="cs-cta-row reveal">
+        <span class="cs-btn cs-btn-disabled"
+          >In progress — no live link yet</span
+        >
+        <a href="broken-keys.html" class="cs-next-link hoverable">
+          Next project: Broken Keys <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <span class="footer-text">© 2026 — Adeboyejo Ademide</span>
+        <span class="footer-text">Built personally with precision.</span>
+      </footer>
+    </div>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/scroll-progress.js"></script>
+  </body>
+</html>

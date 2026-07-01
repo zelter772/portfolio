@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Broken Keys — Adeboyejo Ademide</title>
+    <meta
+      name="description"
+      content="Case study: Broken Keys, a real-time competitive multiplayer word game built as a full-stack PWA."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/case-study.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="page">
+      <header class="nav">
+        <a href="../index.html" class="logo">AD_</a>
+        <nav class="nav-links">
+          <a href="../index.html#about" class="hoverable">About</a>
+          <a href="../index.html#projects" class="hoverable">Projects</a>
+          <a href="../index.html#contact" class="hoverable">Contact</a>
+        </nav>
+      </header>
+
+      <a href="../index.html#projects" class="back-link hoverable"
+        >← Back to projects</a
+      >
+
+      <div class="cs-hero reveal">
+        <div class="cs-eyebrow">Personal venture</div>
+        <h1 class="cs-title">Broken Keys</h1>
+        <p class="cs-tagline">Real-time competitive word game</p>
+        <p class="cs-summary">
+          An idea I had for a fast-paced 1v1 word game where the keyboard itself
+          works against you. Built as a full-stack mobile-first PWA with
+          real-time multiplayer infrastructure, designed to feel responsive and
+          game-like rather than like a typical web app.
+        </p>
+      </div>
+
+      <div class="cs-meta-row reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Founder & developer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Stack</span>
+          <span class="cs-meta-value">React, Vite, Supabase, Zustand</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Type</span>
+          <span class="cs-meta-value">Personal venture</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Status</span>
+          <span class="cs-meta-value">Live</span>
+        </div>
+      </div>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">The idea</div>
+        <p class="cs-body-text">
+          Most word games are slow and solitary. I wanted something with real
+          stakes — a 1v1 format where keys physically break as you play, forcing
+          you to adapt your vocabulary mid-match. The core challenge was making
+          it feel instant: live state sync between two players, word validation
+          against a 267,000-word dictionary, with zero perceptible lag.
+        </p>
+        <p class="cs-body-text">
+          I built it mobile-first because that's where people actually play word
+          games — during commutes, in waiting rooms, between tasks. The PWA
+          setup means it installs to the home screen and works offline-capable,
+          so it feels like a native app without the App Store.
+        </p>
+
+        <div class="cs-phone-row">
+          <div class="cs-phone-col">
+            <div class="cs-phone">
+              <div class="cs-phone-screen">
+                <img
+                  class="cs-phone-img"
+                  src="../assets/screenshots/brokenkeys-home.png"
+                  alt="Broken Keys home screen showing game mode selection"
+                />
+              </div>
+            </div>
+            <p class="cs-phone-caption">Home — mode select</p>
+          </div>
+          <div class="cs-phone-col">
+            <div class="cs-phone">
+              <div class="cs-phone-screen">
+                <img
+                  class="cs-phone-img"
+                  src="../assets/screenshots/brokenkeys-multiplayer.png"
+                  alt="Broken Keys multiplayer room setup screen"
+                />
+              </div>
+            </div>
+            <p class="cs-phone-caption">Multiplayer room setup</p>
+          </div>
+          <div class="cs-phone-col">
+            <div class="cs-phone">
+              <div class="cs-phone-screen">
+                <img
+                  class="cs-phone-img"
+                  src="../assets/screenshots/brokenkeys-settings.png"
+                  alt="Broken Keys game settings screen"
+                />
+              </div>
+            </div>
+            <p class="cs-phone-caption">Game rule customization</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">Key features</div>
+        <div class="cs-features-grid">
+          <div class="cs-feature">
+            <p class="cs-feature-title">Real-time 1v1 multiplayer</p>
+            <p class="cs-feature-desc">
+              Live state sync over Supabase real-time channels. Room creation,
+              joining, and match state all handled in real time with no
+              perceptible delay.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">267k-word dictionary engine</p>
+            <p class="cs-feature-desc">
+              Full SOWPODS dictionary validation running instantly on every
+              submitted word — no lag even during fast-paced competitive play.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Three distinct game modes</p>
+            <p class="cs-feature-desc">
+              Decay (keys break over time), Fixed (set keys disabled from the
+              start), and Daily (one attempt, same keyboard for everyone) — each
+              with its own strategy.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Customizable rule sets</p>
+            <p class="cs-feature-desc">
+              Decay speed, round duration, minimum word length, streak
+              multipliers, and chaos mode — all tunable per match from the
+              settings screen.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Global leaderboard</p>
+            <p class="cs-feature-desc">
+              Persistent score tracking across sessions, driving long-term
+              engagement and competitive replay value beyond single sessions.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Installable PWA</p>
+            <p class="cs-feature-desc">
+              Configured with a web manifest and service workers. Installs to
+              home screen on mobile and works offline-capable without the App
+              Store.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tech-row">
+          <span class="cs-tech-tag">React</span>
+          <span class="cs-tech-tag">Vite</span>
+          <span class="cs-tech-tag">Zustand</span>
+          <span class="cs-tech-tag">Supabase</span>
+          <span class="cs-tech-tag">Supabase Realtime</span>
+          <span class="cs-tech-tag">PWA</span>
+          <span class="cs-tech-tag">Vercel</span>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">Player feedback</div>
+        <div class="cs-testimonial-pending">
+          i really love the interface and how different it is from the regular
+          brain tasking games. i'm obsessed.
+        </div>
+
+        <!-- UNCOMMENT WHEN YOU HAVE THE QUOTE: -->
+        <div class="cs-testimonial">
+          <span class="cs-quote-mark">"</span>
+          <p class="cs-quote-text">
+            i have been trying to get atop the leaderboard for a while now. i
+            love broken keys!!.
+          </p>
+          <p class="cs-quote-author">— keydestroyer99</p>
+        </div>
+      </section>
+
+      <div class="cs-cta-row reveal">
+        <a
+          href="https://broken-keys.vercel.app"
+          target="_blank"
+          rel="noopener"
+          class="cs-btn cs-btn-primary hoverable mobile-only-link"
+        >
+          Play Broken Keys ↗
+        </a>
+        <span class="cs-btn cs-btn-disabled desktop-only-message"
+          >Best experienced on mobile</span
+        >
+        <a href="zyn-beats.html" class="cs-next-link hoverable">
+          Next project: Zyn Beats <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <span class="footer-text">© 2026 — Adeboyejo Ademide</span>
+        <span class="footer-text">Built personally with precision.</span>
+      </footer>
+    </div>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/scroll-progress.js"></script>
+  </body>
+</html>

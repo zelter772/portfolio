@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zyn Beats — Adeboyejo Ademide</title>
+    <meta
+      name="description"
+      content="Case study: Zyn Beats, a full e-commerce platform for selling music beats and licenses online."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/case-study.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="page">
+      <header class="nav">
+        <a href="../index.html" class="logo">AD_</a>
+        <nav class="nav-links">
+          <a href="../index.html#about" class="hoverable">About</a>
+          <a href="../index.html#projects" class="hoverable">Projects</a>
+          <a href="../index.html#contact" class="hoverable">Contact</a>
+        </nav>
+      </header>
+
+      <a href="../index.html#projects" class="back-link hoverable"
+        >← Back to projects</a
+      >
+
+      <div class="cs-hero reveal">
+        <div class="cs-eyebrow">Personal venture</div>
+        <h1 class="cs-title">Zyn Beats</h1>
+        <p class="cs-tagline">Beat store and e-commerce platform</p>
+        <p class="cs-summary">
+          I'm a music producer. I needed a professional storefront to sell my
+          beats and licenses online, so I built one. Zyn Beats is a full
+          e-commerce platform with tiered licensing, secure payment processing,
+          automated order emails, and an admin dashboard to manage everything,
+          built entirely by me, for my own production brand.
+        </p>
+      </div>
+
+      <div class="cs-meta-row reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value">Founder & developer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Stack</span>
+          <span class="cs-meta-value">React, Vite, Supabase, Paystack</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Type</span>
+          <span class="cs-meta-value">Personal venture</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Status</span>
+          <span class="cs-meta-value">Live</span>
+        </div>
+      </div>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">The idea</div>
+        <p class="cs-body-text">
+          Most beat stores are built on third-party platforms that take a cut of
+          every sale, limit how you present your brand, and give you no control
+          over the buyer experience. I wanted full ownership of the storefront,
+          the checkout flow, the licensing logic, and the data.
+        </p>
+        <p class="cs-body-text">
+          Building it myself meant I could design it exactly for how producers
+          actually sell: tiered licenses with different usage rights, a cart
+          that persists across devices, instant order confirmation emails, and
+          an admin dashboard where I can manage the whole catalog without
+          touching code every time I drop a new beat.
+        </p>
+
+        <div class="cs-image-grid three">
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">zynbeats.vercel.app</span>
+            </div>
+            <img
+              class="cs-shot-img"
+              src="../assets/screenshots/zyn-homepage.png"
+              alt="Zyn Beats homepage hero with the ZYN logo and browse beats CTA"
+            />
+          </div>
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">zynbeats.vercel.app/signup</span>
+            </div>
+            <img
+              class="cs-shot-img"
+              src="../assets/screenshots/zyn-auth.png"
+              alt="Zyn Beats sign up page"
+            />
+          </div>
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">zynbeats.vercel.app/cart</span>
+            </div>
+            <img
+              class="cs-shot-img"
+              src="../assets/screenshots/zyn-cart.png"
+              alt="Zyn Beats cart page showing empty state design"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">Key features</div>
+        <div class="cs-features-grid">
+          <div class="cs-feature">
+            <p class="cs-feature-title">Tiered licensing system</p>
+            <p class="cs-feature-desc">
+              Basic Lease, Streaming Lease, and Exclusive Rights — each with
+              different pricing and usage terms, selectable per beat at
+              checkout.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Secure checkout via Paystack</p>
+            <p class="cs-feature-desc">
+              Full payment gateway integration including transaction
+              verification and webhook handling for reliable order confirmation.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Automated order emails</p>
+            <p class="cs-feature-desc">
+              Transactional email pipeline via Resend — buyers receive instant
+              order confirmation with license details immediately after
+              purchase.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Admin dashboard</p>
+            <p class="cs-feature-desc">
+              A full internal tool for managing the beat catalog, orders, and
+              licenses — no code needed to add new beats or update pricing.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Cross-device cart persistence</p>
+            <p class="cs-feature-desc">
+              Cart state syncs via Supabase so buyers can browse on mobile,
+              return on desktop, and pick up exactly where they left off.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Beat catalog with filtering</p>
+            <p class="cs-feature-desc">
+              Buyers filter by genre, mood, and BPM. Built to scale as the
+              catalog grows without any changes to the frontend filter logic.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tech-row">
+          <span class="cs-tech-tag">React</span>
+          <span class="cs-tech-tag">Vite</span>
+          <span class="cs-tech-tag">Supabase</span>
+          <span class="cs-tech-tag">Paystack</span>
+          <span class="cs-tech-tag">Resend</span>
+          <span class="cs-tech-tag">Vercel</span>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">On building my own tools</div>
+        <p class="cs-body-text">
+          The most interesting part of this project wasn't the e-commerce logic
+          — it was the perspective shift that comes from being both the
+          developer and the actual user. Every friction point I hit as a
+          producer using other platforms became a feature I built into this one.
+          That feedback loop — building for yourself — produces software that
+          works differently from software built for an abstract user.
+        </p>
+      </section>
+
+      <div class="cs-cta-row reveal">
+        <a
+          href="https://zynbeats.vercel.app"
+          target="_blank"
+          rel="noopener"
+          class="cs-btn cs-btn-primary hoverable"
+        >
+          Visit Zyn Beats ↗
+        </a>
+        <a href="cerebra.html" class="cs-next-link hoverable">
+          Next project: Cerebra <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <span class="footer-text">© 2026 — Adeboyejo Ademide</span>
+        <span class="footer-text">Built personally with precision.</span>
+      </footer>
+    </div>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/scroll-progress.js"></script>
+  </body>
+</html>
