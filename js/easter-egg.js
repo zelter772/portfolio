@@ -112,11 +112,13 @@
 
   logo.addEventListener("click", (e) => {
     e.preventDefault();
+    e.stopPropagation();
     clickCount++;
 
-    if (clickCount === 2) {
+    clearTimeout(clickTimer);
+
+    if (clickCount >= 2) {
       clickCount = 0;
-      clearTimeout(clickTimer);
       if (isVisible) {
         hideTerminal();
       } else {
@@ -125,13 +127,27 @@
       return;
     }
 
-    // reset click count after 400ms if second click doesn't come
     clickTimer = setTimeout(() => {
       clickCount = 0;
       // single click — navigate normally
-      window.location.href = logo.getAttribute("href");
-    }, 400);
+      const href = logo.getAttribute("href");
+      if (href && href !== "#top") {
+        window.location.href = href;
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 350);
   });
+
+  // also attach to the img inside the logo in case the click lands on it
+  const logoImg = logo.querySelector("img");
+  if (logoImg) {
+    logoImg.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      logo.click();
+    });
+  }
 
   // also dismiss on single click anywhere else while visible
   document.addEventListener("click", (e) => {
