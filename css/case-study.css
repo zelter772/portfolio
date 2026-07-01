@@ -104,12 +104,17 @@ a {
   background: transparent;
 }
 
-.logo {
+/* .logo {
   font-family: "Space Mono", monospace;
   font-size: 13px;
   color: #3b82f6;
   letter-spacing: 0.08em;
   text-decoration: none;
+} */
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
