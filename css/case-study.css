@@ -28,12 +28,12 @@ select {
   cursor: text;
 }
 
-a,
+/* a,
 button,
 [role="button"],
 label {
   cursor: none;
-}
+} */
 
 @media (hover: none), (pointer: coarse) {
   body {
@@ -65,7 +65,7 @@ a {
 }
 
 /* ============ CURSOR (shared with main site) ============ */
-#cursor-ring {
+/* #cursor-ring {
   position: fixed;
   width: 28px;
   height: 28px;
@@ -90,7 +90,24 @@ a {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.2s ease;
+} */
+
+/* ============ CUSTOM CURSOR — logo mark ============ */
+/* *,
+*::before,
+*::after {
+  cursor: url("../assets/icons/cursor.svg") 16 16, auto;
 }
+
+input,
+textarea,
+select {
+  cursor: text;
+}
+
+.cs-btn-disabled {
+  cursor: not-allowed;
+} */
 
 /* ============ NAV (shared) ============ */
 .nav {
@@ -473,7 +490,7 @@ a {
   border-radius: 4px;
   letter-spacing: 0.02em;
   text-decoration: none;
-  cursor: none;
+  /* cursor: none; */
   transition: opacity 0.2s ease;
 }
 
@@ -541,7 +558,6 @@ a {
     font-family: "Space Grotesk", sans-serif;
     margin: 0;
     padding: 0;
-    cursor: none; /* custom cursor replaces default */
   }
   .nav {
     margin-right: 2%;

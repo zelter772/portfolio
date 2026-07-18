@@ -16,23 +16,22 @@ body {
   font-family: "Space Grotesk", sans-serif;
   margin: 0;
   padding: 0 8%;
-  cursor: none; /* custom cursor replaces default */
 }
 /* restore normal cursor on form elements */
-input,
+/* input,
 textarea,
 select {
   cursor: none;
-}
+} */
 
 /* remove hand cursor from all clickable elements —
    the custom ring handles the hover feedback instead */
-a,
+/* a,
 button,
 [role="button"],
 label {
   cursor: none;
-}
+} */
 
 /* On touch devices, restore the normal cursor and hide the custom one */
 @media (hover: none), (pointer: coarse) {
@@ -66,7 +65,7 @@ a {
 }
 
 /* ============ CUSTOM CURSOR ============ */
-#cursor-ring {
+/* #cursor-ring {
   position: fixed;
   width: 28px;
   height: 28px;
@@ -91,7 +90,9 @@ a {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.2s ease;
-}
+} */
+
+/* ============ CUSTOM CURSOR — logo mark ============ */
 
 /* ============ NAV ============ */
 .nav {
@@ -217,7 +218,7 @@ a {
   letter-spacing: 0.02em;
   text-decoration: none;
   border: none;
-  cursor: none;
+  /* cursor: none; */
   transition: opacity 0.2s ease, transform 0.1s ease;
 }
 
@@ -653,7 +654,6 @@ a {
     font-family: "Space Grotesk", sans-serif;
     margin: 0;
     padding: 0;
-    cursor: none; /* custom cursor replaces default */
   }
   .nav {
     margin-right: 2%;

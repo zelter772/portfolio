@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rx Interact — Adeboyejo Ademide</title>
+    <meta
+      name="description"
+      content="Case study: Rx Interact, a drug interaction and dosage reference tool for pharmacy students built on real clinical data."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="../css/case-study.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div>
+
+    <div class="page">
+      <header class="nav">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/icons/logo.svg"
+            alt="Adeboyejo Ademide"
+            width="32"
+            height="32"
+            style="display: block; border-radius: 6px"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="../index.html#about" class="hoverable">About</a>
+          <a href="../index.html#projects" class="hoverable">Projects</a>
+          <a href="../index.html#contact" class="hoverable">Contact</a>
+        </nav>
+      </header>
+
+      <a href="../index.html#projects" class="back-link hoverable"
+        >← Back to projects</a
+      >
+
+      <div class="cs-hero reveal">
+        <div class="cs-eyebrow">Featured case study</div>
+        <h1 class="cs-title">Rx Interact</h1>
+        <p class="cs-tagline">
+          Drug interaction reference tool for pharmacy students
+        </p>
+        <p class="cs-summary">
+          A full-stack clinical reference tool built on real data, not mocked
+          content. Pharmacy students can look up drugs, check interactions, and
+          save personal study notes, all backed by RxNorm, openFDA, and DDInter
+          with 19,750 seeded drug names and 140,000+ interaction pairs.
+        </p>
+      </div>
+
+      <div class="cs-meta-row reveal">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span class="cs-meta-value"
+            >Solo — data pipeline, backend, frontend, design</span
+          >
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Stack</span>
+          <span class="cs-meta-value"
+            >Next.js 14, TypeScript, Supabase, Tailwind</span
+          >
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Type</span>
+          <span class="cs-meta-value">Personal venture</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Status</span>
+          <span class="cs-meta-value">Live</span>
+        </div>
+      </div>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">The problem</div>
+        <p class="cs-body-text">
+          Pharmacy students constantly cross-reference drug information across
+          multiple disconnected tools — dosing, contraindications, warnings, and
+          interaction data spread across databases that feel like sterile
+          government portals. None of them are fast, none of them are designed
+          for students, and none of them let you save your own notes alongside
+          the clinical data.
+        </p>
+        <p class="cs-body-text">
+          Rx Interact consolidates this into a single fast reference tool with a
+          clean editorial design — backed by real clinical data sources, not a
+          curated subset or mocked content.
+        </p>
+
+        <div class="cs-image-grid">
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">rxinteract.vercel.app</span>
+            </div>
+            <div
+              style="
+                height: 280px;
+                background: #0a0a0a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <span
+                style="
+                  font-family: 'Space Mono', monospace;
+                  font-size: 11px;
+                  color: #333;
+                "
+                >screenshot coming soon</span
+              >
+            </div>
+          </div>
+          <div class="cs-shot-frame">
+            <div class="cs-shot-bar">
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-dot"></span>
+              <span class="cs-shot-url">rxinteract.vercel.app/drugs</span>
+            </div>
+            <div
+              style="
+                height: 280px;
+                background: #0a0a0a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <span
+                style="
+                  font-family: 'Space Mono', monospace;
+                  font-size: 11px;
+                  color: #333;
+                "
+                >screenshot coming soon</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">Technical highlights</div>
+        <p class="cs-body-text">
+          The interesting engineering problems on this project weren't in the
+          features, they were in the infrastructure that makes the features
+          actually work at real scale.
+        </p>
+
+        <div class="cs-features-grid">
+          <div class="cs-feature">
+            <p class="cs-feature-title">Search performance — 82ms → 2ms</p>
+            <p class="cs-feature-desc">
+              Initial queries hit full sequential scans on a 19,750-row table.
+              Fixed with a <code>text_pattern_ops</code> expression index on
+              lowercased names for prefix search, and corrected fuzzy search to
+              use pg_trgm's similarity operator properly — cutting query time
+              from 82ms to ~2ms.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Postgres-backed API cache</p>
+            <p class="cs-feature-desc">
+              Every drug page originally made 2–3 live calls to RxNorm and
+              openFDA per request. Built a Postgres <code>api_cache</code> table
+              with TTL-based expiry instead of in-memory caching, because
+              Vercel's stateless serverless functions don't persist memory
+              between invocations.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">140k interaction pair pipeline</p>
+            <p class="cs-feature-desc">
+              Seeded 140,141 drug interaction pairs from DDInter 1.0 via a
+              three-pass name-resolution process: exact match,
+              route-suffix-stripped matching, and confidence-gated RxNorm
+              synonym bridging with full audit logs of every bridged match.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Honest data-gap communication</p>
+            <p class="cs-feature-desc">
+              The app explicitly distinguishes three outcomes: confirmed
+              interaction, checked with nothing found, and insufficient data to
+              say. A data gap is never presented as a false safety signal. A
+              deliberate product decision, not just a UI detail.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Custom FDA text pipeline</p>
+            <p class="cs-feature-desc">
+              Built a text-processing pipeline that strips FDA cross-reference
+              clutter, splits flattened label text into readable bullets,
+              handles embedded bullet characters and en-dash sub-items, and
+              removes near-duplicate content between label summaries and body
+              text.
+            </p>
+          </div>
+          <div class="cs-feature">
+            <p class="cs-feature-title">Study annotation system</p>
+            <p class="cs-feature-desc">
+              Sticky-note annotations with three handwriting fonts, a toggle
+              between sticky and plain styles, autosave on blur, and full-text
+              search across both drug names and note content, built for exam
+              prep and clinical rotations.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-tech-row">
+          <span class="cs-tech-tag">Next.js 14</span>
+          <span class="cs-tech-tag">TypeScript</span>
+          <span class="cs-tech-tag">Supabase</span>
+          <span class="cs-tech-tag">PostgreSQL</span>
+          <span class="cs-tech-tag">Row Level Security</span>
+          <span class="cs-tech-tag">Tailwind CSS</span>
+          <span class="cs-tech-tag">RxNorm API</span>
+          <span class="cs-tech-tag">openFDA</span>
+          <span class="cs-tech-tag">DDInter 1.0</span>
+          <span class="cs-tech-tag">pg_trgm</span>
+          <span class="cs-tech-tag">Vercel</span>
+        </div>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">What I'd build next</div>
+        <p class="cs-body-text">
+          Multi-drug interaction checking across 3+ drugs simultaneously, a
+          spaced-repetition quiz mode, interaction pair saving, and backfilled
+          interaction mechanisms where source data allows. The architecture is
+          already built to support all of these without a rebuild.
+        </p>
+      </section>
+
+      <section class="cs-section reveal">
+        <div class="cs-section-label">User feedback</div>
+        <div class="cs-testimonial-pending">
+          testimonial pending — add a real user quote here once collected
+        </div>
+
+        <!-- UNCOMMENT WHEN YOU HAVE THE QUOTE:
+      <div class="cs-testimonial">
+        <span class="cs-quote-mark">"</span>
+        <p class="cs-quote-text">PASTE REAL QUOTE HERE.</p>
+        <p class="cs-quote-author">— Name, pharmacy student</p>
+      </div>
+      --></section>
+
+      <div class="cs-cta-row reveal">
+        <a
+          href="https://rxinteract.vercel.app"
+          target="_blank"
+          rel="noopener"
+          class="cs-btn cs-btn-primary hoverable"
+        >
+          Visit Rx Interact
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 10 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 4px;
+            "
+          >
+            <line
+              x1="1"
+              y1="9"
+              x2="9"
+              y2="1"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="square"
+            />
+            <polyline
+              points="4,1 9,1 9,6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="square"
+            />
+          </svg>
+        </a>
+        <a href="olu-mide.html" class="cs-next-link hoverable">
+          Next project: Olu & Mide <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <span class="footer-text">© 2026 — Adeboyejo Ademide</span>
+        <span class="footer-text">Built with precision.</span>
+      </footer>
+    </div>
+
+    <script src="../js/cursor.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/interactions.js"></script>
+    <script src="../js/transitions.js"></script>
+  </body>
+</html>

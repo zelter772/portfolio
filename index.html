@@ -26,8 +26,8 @@
     <canvas id="bg-canvas"></canvas>
 
     <!-- Custom cursor -->
-    <div id="cursor-ring"></div>
-    <div id="cursor-dot"></div>
+    <!-- <div id="cursor-ring"></div>
+    <div id="cursor-dot"></div> -->
 
     <div class="page">
       <!-- ===== NAV ===== -->
@@ -103,8 +103,87 @@
       <section class="section reveal" id="projects">
         <div class="section-label">Projects</div>
         <div class="projects-stack">
+          <article class="project-card featured reveal">
+            <div class="preview-window">
+              <div class="browser-bar">
+                <span class="browser-dot"></span
+                ><span class="browser-dot"></span
+                ><span class="browser-dot"></span>
+                <span class="browser-url">rxinteract.vercel.app</span>
+                <span class="live-badge live"
+                  ><span class="pulse-dot"></span>live</span
+                >
+              </div>
+              <div
+                class="preview-frame-wrap"
+                data-src="https://rxinteract.vercel.app"
+              >
+                <div class="preview-placeholder">
+                  <span class="placeholder-text">loading preview…</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="featured-badge">Featured case study</div>
+              <div class="project-num">01</div>
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title">Rx Interact</h3>
+                  <p class="project-tagline">Drug interaction reference tool</p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a
+                    href="https://rxinteract.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link hoverable"
+                    >Live site ↗︎</a
+                  >
+                  <a
+                    href="projects/rx-interact.html"
+                    class="project-link hoverable"
+                    >Case study →</a
+                  >
+                </div>
+              </div>
+              <p class="project-desc">
+                A clinically-grounded drug interaction and dosage reference tool
+                for pharmacy students — built on real data from RxNorm, openFDA,
+                and DDInter, with 19,750 seeded drug names, 140,000+ interaction
+                pairs, and a custom text-processing pipeline that makes FDA
+                label data actually readable.
+              </p>
+              <ul class="project-features">
+                <li>Debounced autocomplete across 19,750 drug names</li>
+                <li>140k+ interaction pairs with severity classification</li>
+                <li>Query optimization: 82ms → 2ms with expression indexes</li>
+                <li>Postgres-backed API cache for stateless serverless</li>
+                <li>Sticky-note study annotations with autosave</li>
+                <li>
+                  Honest data-gap communication, never false safety signals
+                </li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">RxNorm</span>
+                <span class="tech-tag">openFDA</span>
+                <span class="tech-tag">DDInter</span>
+              </div>
+            </div>
+          </article>
+
           <!-- Project 01 — Olu & Mide (Featured) -->
-          <article class="project-card featured">
+          <article class="project-card reveal">
             <div class="preview-window">
               <div class="browser-bar">
                 <span class="browser-dot"></span
@@ -124,8 +203,8 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="featured-badge">Featured case study</div>
-              <div class="project-num">01</div>
+              <!-- <div class="featured-badge">Featured case study</div> -->
+              <div class="project-num">02</div>
               <div class="project-top">
                 <div>
                   <h3 class="project-title">Olu & Mide Ltd</h3>
@@ -194,7 +273,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-num">02</div>
+              <div class="project-num">03</div>
               <div class="project-top">
                 <div>
                   <h3 class="project-title">Broken Keys</h3>
@@ -264,7 +343,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-num">03</div>
+              <div class="project-num">04</div>
               <div class="project-top">
                 <div>
                   <h3 class="project-title">Zyn Beats</h3>
@@ -337,7 +416,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-num">04</div>
+              <div class="project-num">05</div>
               <div class="project-top">
                 <div>
                   <h3 class="project-title">Cerebra</h3>
